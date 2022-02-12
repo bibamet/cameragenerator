@@ -1,0 +1,14 @@
+kafka:
+  bootstrap-servers: localhost:9092
+  consumer:
+    group-id: test-consumer-group
+  topic-name: SpeedControl
+server:
+  port: 42001
+internal:
+  camera:
+    address: Russia, Ryazan region, Ryazan, Moscow highway, 21A
+    regex: ^[????????????]\\d{3}(?<!000)[????????????]{2}\\d{2,3}$
+  api:
+    url-camera-resolver: ${URL_CAMERA_RESOLVER:http://localhost:42099}
+    path-speed-limit: ${PATH_SPEED_LIMIT:speed}
